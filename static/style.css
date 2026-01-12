@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+    color: #00ff00; /* Classic green */
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.terminal {
+    width: 80%;
+    height: 80%;
+    background-color: #000;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.terminal-header {
+    background-color: #333;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.terminal-body {
+    padding: 10px;
+}
+
+.prompt {
+    color: #00ff00;
+    animation: blink 1s infinite; /* Blinking cursor */
+    display: inline;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
