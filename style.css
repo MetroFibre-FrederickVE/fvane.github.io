@@ -1,0 +1,44 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent body scroll */
+}
+
+#terminal {
+    width: 80%;
+    height: 80%;
+    background-color: #000;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+    position: relative; /* For potential overlays */
+}
+
+/* xterm overrides for retro match */
+.xterm {
+    font-family: 'Courier New', monospace;
+    font-size: 14px; /* Adjust for readability */
+}
+
+.xterm-screen {
+    background-color: #000 !important;
+}
+
+.xterm-viewport {
+    background-color: #000 !important;
+}
+
+/* Blinking cursor */
+.xterm-cursor {
+    background-color: #00ff00 !important;
+    color: #000 !important;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { background-color: transparent; }
+}
