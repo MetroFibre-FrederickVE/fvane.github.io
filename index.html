@@ -6,50 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fvane</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="styles.css">
     <script src="/tailwind.min.js"></script>
 
     <!-- Optional -->
     <link rel="canonical" href="https://fvane.is-a.dev/">
-
-    <style>
-        body {
-            font-family: "Consolas", "Menlo", "Monaco", monospace;
-        }
-
-        .icon svg {
-            transition: transform 0.2s ease-out;  /* Added ease-out for smoother "snap back" */
-        }
-
-        .icon:hover svg {
-            animation: bounce 0.4s ease-in-out;  /* Trigger the animation on hover */
-            transform: scale(1.1);  /* Keep your scale, but now with bounce */
-        }
-
-        @keyframes bounce {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }  /* Overshoot for bounce feel */
-            100% { transform: scale(1.1); }  /* Settle at your target scale */
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-
-        #job-title {
-            position: relative;  /* For positioning the cursor */
-            white-space: nowrap;  /* Prevent wrapping during typing */
-            overflow: hidden;     /* Hide overflow if needed for animation */
-        }
-
-        #job-title::after {
-          content: '|';
-          display: var(--after-display, inline-block);  /* Default to show, but controllable */
-          animation: blink 0.7s infinite;
-          margin-left: 2px;
-      }
-
-    </style>
 
 </head>
 
