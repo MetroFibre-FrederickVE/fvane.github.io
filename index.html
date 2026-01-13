@@ -1,15 +1,349 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
-    <link rel="stylesheet" href="node_modules/@xterm/xterm/css/xterm.css" />
-    <link rel="stylesheet" href="style.css"> <!-- Your custom styles -->
-    <script src="node_modules/@xterm/xterm/lib/xterm.js"></script>
-    <script src="script.js"></script> <!-- Command logic -->
-</head>
-<body>
-    <div id="terminal"></div>
-</body>
+<html lang="en" class="lenis lenis-smooth" data-critters-container>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="fvane"
+      href="https://www.temp.io//blog/rss.xml"
+    />
+    <title>fvane</title>
+    <link rel="canonical" href="https://www.temp.io/" />
+    <meta
+      name="description"
+      content="fvane, software developer based in Pretoria, South Africa. Passionate about transforming ideas into real world apps."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="fvane" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.temp.io/banner.png" />
+    <meta property="og:url" content="https://www.temp.io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="https://www.temp.io" />
+    <meta name="twitter:title" content="fvane" />
+    <meta name="twitter:image:alt" content="fvane" />
+    <meta name="twitter:creator" content="@tempdotio" />
+  </head>
+  <body
+    class="bg-dark text-light font-sans container text-base font-light relative scroll-smooth"
+  >
+    <div class="md:h-[10dvh] max-md:h-[5dvh]"></div>
+    <main class="flex flex-col space-y-8">
+      <section
+        class="py-4 border-t border-light/10 grid md:grid-cols-3 max-md:grid-cols-1 max-md:gap-4 border-none gap-x-8"
+      >
+        <header class="col-span-1 flex flex-col space-y-4">
+          <div class="flex flex-col space-y-0">
+            <h1 class="font-bold hover:cursor-pointer">
+              <a href="/"></a>
+            </h1>
+            <span class="text-light/50"> Software Engineer</span> <!-- Thinking of having the second word cycle through other options -->
+          </div>
+          <div
+            class="flex md:flex-col text-light/50 md:space-y-1 max-md:justify-between max-md:items-center w-full max-md:text-sm italic max-md:hidden"
+          >
+            <a
+              href="https://www.linkedin.com/in/tempdotio/"
+              target="_blank"
+              class="hover:text-light flex items-center space-x-1"
+              aria-label="linkedin"
+              title="linkedin"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                class="inline mr-1"
+                data-icon="mdi:linkedin"
+              >
+                <symbol id="ai:mdi:linkedin">
+                  <path
+                    fill="currentColor"
+                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"
+                  />
+                </symbol>
+                <use xlink:href="#ai:mdi:linkedin" />
+              </svg>
+              <span
+                class="underline-offset-4 hover:decoration-light/50 decoration-light/20"
+              >
+                tempdotio
+              </span>
+            </a>
+            <a
+              href="https://x.com/tempdotio"
+              target="_blank"
+              class="hover:text-light flex items-center space-x-1"
+              aria-label="Twitter"
+              title="Twitter"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                class="inline mr-1"
+                data-icon="mdi:twitter"
+              >
+                <symbol id="ai:mdi:twitter">
+                  <path
+                    fill="currentColor"
+                    d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23"
+                  />
+                </symbol>
+                <use xlink:href="#ai:mdi:twitter" />
+              </svg>
+              <span
+                class="underline-offset-4 hover:decoration-light/50 decoration-light/20"
+              >
+                tempdotio
+              </span>
+            </a>
+            <a
+              href="https://github.com/temp"
+              target="_blank"
+              class="hover:text-light flex items-center space-x-1"
+              aria-label="Github"
+              title="Github"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                class="inline mr-1"
+                data-icon="mdi:github"
+              >
+                <symbol id="ai:mdi:github">
+                  <path
+                    fill="currentColor"
+                    d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"
+                  />
+                </symbol>
+                <use xlink:href="#ai:mdi:github" />
+              </svg>
+              <span
+                class="underline-offset-4 hover:decoration-light/50 decoration-light/20"
+              >
+                github name
+              </span>
+            </a>
+          </div>
+        </header>
+        <div
+          class="col-span-2 flex flex-col space-y-4 text-light/75 leading-relaxed tracking-wide"
+        >
+          <p class>
+            Quick about me section 1
+            .
+          </p>
+          <p>
+            Quick about me section 2
+          </p>
+          <p>
+            <span class="no-underline">
+              If you want to chat or connect with me, hit me up on
+            </span>
+            <a
+              href="https://www.linkedin.com/in/tempdotio/"
+              target="_blank"
+              class="underline hover:text-light decoration-light/20 underline-offset-4 hover:decoration-light/50"
+              aria-label="linkedin"
+              title="linkedin"
+            >
+              Linkedin
+            </a>
+            <span class="no-underline">,</span>
+            <a
+              href="https://x.com/tempdotio"
+              target="_blank"
+              class="underline hover:text-light decoration-light/20 underline-offset-4 hover:decoration-light/50"
+              aria-label="Twitter"
+              title="Twitter"
+            >
+              Twitter
+            </a>
+            <span class="no-underline">or shoot me an email at</span>
+            <a
+              href="mailto:temp@temp.io"
+              class="underline hover:text-light decoration-light/20 underline-offset-4 hover:decoration-light/50"
+              aria-label="Email"
+              title="Email"
+            >
+              temp@temp.io
+            </a>
+            <span class="no-underline">.</span>
+          </p>
+        </div>
+      </section>
+      <section
+        class="py-4 border-t border-light/10 grid sm:grid-cols-2 gap-4 gap-y-8 max-sm:grid-cols-1"
+      >
+        <div class="flex flex-col space-y-4">
+          <h2 class="font-bold text-light">Fluff 1</h2>
+          <p class="text-light/75 line-clamp-3">
+            Text
+          </p>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h2 class="font-bold text-light">Fluff 2</h2>
+          <p class="text-light/75 line-clamp-3">
+            Text
+          </p>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h2 class="font-bold text-light">Fluff 3</h2>
+          <p class="text-light/75 line-clamp-3">
+            Text
+          </p>
+        </div>
+        <div class="flex flex-col space-y-4">
+          <h2 class="font-bold text-light">Fluff 4</h2>
+          <p class="text-light/75 line-clamp-3">
+            Text
+          </p>
+        </div>
+      </section>
+      <!-- <section class="py-4 border-t border-light/10 grid grid-cols-1 gap-4">
+        <div class="col-span-1">
+          <div class="flex flex-col space-y-4">
+            <h2 class="text-light font-bold">Spaces</h2>
+          </div>
+          <p class="text-light/50 py-4">
+            Welcome to my digital spaces! Here you can find different parts of
+            my digital life, from projects, posts and notes.
+          </p>
+        </div>
+        <div
+          class="flex flex-col col-span-2 md:space-y-4 text-light/75 max-md:space-y-2"
+        >
+          <div class="grid grid-cols-3 max-md:grid-cols-1 gap-4 max-md:gap-4">
+            <a
+              class="flex flex-col p-4 space-y-4 border rounded-md border-light/5 hover:border-light/10"
+              href="/projects/"
+            >
+              <h3
+                class="font-bold text-light/75 hover:text-light hover:decoration-light/50"
+              >
+                Projects
+              </h3>
+              <p class="leading-relaxed text-light/50">
+                Showcasing my creations: a collection of projects I've worked
+                on, from coding experiments to design explorations
+              </p>
+            </a>
+            <a
+              class="flex flex-col p-4 space-y-4 border rounded-md border-light/5 hover:border-light/10"
+              href="https://blog.temp.io/"
+            >
+              <h3
+                class="font-bold text-light/75 hover:text-light hover:decoration-light/50"
+              >
+                Blog
+              </h3>
+              <p class="leading-relaxed text-light/50">
+                A collection of my thoughts, experiences, and learnings from my
+                journey as a software developer
+              </p>
+            </a>
+            <a
+              class="flex flex-col p-4 space-y-4 border rounded-md border-light/5 hover:border-light/10"
+              href="https://cs.temp.io/"
+            >
+              <h3
+                class="font-bold text-light/75 hover:text-light hover:decoration-light/50"
+              >
+                CS Notes
+              </h3>
+              <p class="leading-relaxed text-light/50">
+                A collection of my lecture notes from ETHZ on computer science
+                topics, algorithms, data structures, and more.
+              </p>
+            </a>
+          </div>
+        </div>
+      </section> -->
+      <!-- <FeaturedProjects /> -->
+      <!-- <FeaturedBlogs /> -->
+      <footer
+        class="py-4 border-t border-light/10 flex flex-col text-light/50 space-y-6"
+      >
+        <div class="flex w-full items-center justify-between text-sm">
+          <div
+            class="flex items-center md:justify-start space-x-3 max-md:mx-auto max-md:w-full max-md:justify-center"
+          >
+            <!-- <a href="/" class="hover:text-light/75"> Home </a> -->
+            <!-- <a href="/blog" class="hover:text-light/75"> Blog </a> -->
+            <!-- <a href="/projects" class="hover:text-light/75"> Projects </a> -->
+            <!-- <a href="/resume" class="hover:text-light/75"> Resume </a> -->
+          </div>
+          <div class="text-light/50 max-md:hidden">
+            Effectively turning ideas into solutions since 20XX
+          </div>
+        </div>
+        <div
+          class="flex w-full items-center justify-between text-sm max-md:flex-col"
+        >
+          <div class="flex items-center justify-start space-x-2">
+            <div class="flex items-center justify-start space-x-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="7"
+                height="16"
+                fill="none"
+                viewBox="0 0 7 16"
+                class="fill-light/50"
+              >
+                <path d="M3 6.5h1v6l-.5 1-.5-1v-6z" />
+                <path
+                  fill-rule="evenodd"
+                  d="M3.5 6a2.5 2.5 0 100-5 2.5 2.5 0 000 5zm-1-3a.5.5 0 100-1 .5.5 0 000 1z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>Made in South Africa</span>
+            </div>
+            <span class="px-1">·</span>
+            <!-- <a href="/temp" class="hover:text-light/75"> Temp </a> -->
+          </div>
+          <div class="flex text-light/50 items-center space-x-2">
+            <a
+              href="https://github.com/temp/"
+              target="_blank"
+              class="hover:text-light/75"
+              rel="noopener noreferrer"
+              aria-label="Github"
+              title="Github"
+            >
+              Github
+            </a>
+            <a
+              href="https://www.linkedin.com/in/temp/"
+              target="_blank"
+              class="hover:text-light/75"
+              rel="noopener noreferrer"
+              aria-label="Linkedin"
+              title="Linkedin"
+            >
+              Linkedin
+            </a>
+            <a
+              href="https://x.com/temp"
+              target="_blank"
+              class="hover:text-light/75"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+              title="Twitter"
+            >
+              Twitter
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <div class="h-[10dvh]"></div>
+  </body>
 </html>
