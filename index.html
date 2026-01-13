@@ -17,12 +17,37 @@
         }
 
         .icon svg {
-            transition: transform 0.2s;
+            transition: transform 0.2s ease-out;  /* Added ease-out for smoother "snap back" */
         }
 
         .icon:hover svg {
-            transform: scale(1.1);
+            animation: bounce 0.4s ease-in-out;  /* Trigger the animation on hover */
+            transform: scale(1.1);  /* Keep your scale, but now with bounce */
         }
+
+        @keyframes bounce {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }  /* Overshoot for bounce feel */
+            100% { transform: scale(1.1); }  /* Settle at your target scale */
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        #job-title {
+            position: relative;  /* For positioning the cursor */
+            white-space: nowrap;  /* Prevent wrapping during typing */
+            overflow: hidden;     /* Hide overflow if needed for animation */
+        }
+
+        #job-title::after {
+          content: '|';
+          display: var(--after-display, inline-block);  /* Default to show, but controllable */
+          animation: blink 0.7s infinite;
+          margin-left: 2px;
+      }
 
     </style>
 
@@ -30,17 +55,15 @@
 
 <body
     class="min-h-screen p-6 flex flex-col items-center justify-center text-gray-100 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-</body>
 
     <!-- Profile Picture -->
-<div class="w-32 h-32 rounded-full border-2 border-white-700 mb-6 overflow-hidden relative">
-  <img src="assets/images/avatar.jpg" alt="fvane avatar" class="w-full h-full object-cover transform scale-200">
-</div>
+    <div id="profile-pic-container" class="w-32 h-32 rounded-full border-2 border-gray-700 mb-6 overflow-hidden relative cursor-pointer">  <!-- Added id and cursor-pointer for UX hint -->
+      <img src="assets/images/avatar.jpg" alt="Frederick van Eeden's avatar - click for a surprise" class="w-full h-full object-cover transform scale-200">
+    </div>
 
-    
     <!-- Name & Description -->
-    <h1 class="text-3xl font-bold mb-2">Frederick van Eeden</h1>
-    <p class="text-gray-400 mb-6 text-center">...Engineer...</p>
+    <h1 class="text-3xl font-bold mb-2">Frederick J. van Eeden</h1>
+    <p id="job-title" class="text-gray-400 mb-6 text-center">...Engineer...</p>
 
     <!-- Links -->
     <div class="flex flex-wrap justify-center gap-4 mb-6">
@@ -67,10 +90,10 @@
         About me text goes here.
     </p>
 
-
     <div class="flex flex-wrap justify-center gap-4 text-gray-200">
         <!-- <a href="link to projects" target="_blank" class="hover:underline">projects</a> -->
     </div>
+
     <script src="main.js"></script>
 
 </body>
