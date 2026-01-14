@@ -1,9 +1,10 @@
 // Array of job titles to cycle through
 const titles = [
   'Software Engineer',
-  'Full-Stack Engineer',
+  'Full-Stack Developer',
   'Master Code Wizard',
-  'Backend Engineer'
+  'Backend Engineer',
+  'Vibe code cleanup Specialist '
 ];
 
 // Get elements
